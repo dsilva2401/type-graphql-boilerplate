@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server-express';
 import * as express from 'express';
 import { buildSchema } from 'type-graphql';
-import { DemoResolver } from './resolvers/DemoResolver';
+import { ToDosResolver } from './resolvers/ToDosResolver';
 
 
 (async () => {
@@ -12,7 +12,7 @@ import { DemoResolver } from './resolvers/DemoResolver';
 
   // Setup root schema
   const schema = await buildSchema({
-    resolvers: [ DemoResolver ]
+    resolvers: [ ToDosResolver ]
   })
 
   // Setup Apollo
